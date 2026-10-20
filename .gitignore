@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local environment & secrets
+.env
+*.env
+
+# Local runtime logs & flags
+*.log
+scan_history.log
+.*_flag
+.whitelist_migrated
+
+# Whitelist databases & backups (large local cache)
+.jarvis_whitelist.db*
+.jarvis_whitelist.json*
+*.db
+*.db-wal
+*.db-shm
+*.bak
+
+# Quarantine vault (isolated malware / system DLLs)
+Quarantine/
+*.jarvis_locked
+
+# Editor & OS artifacts
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini

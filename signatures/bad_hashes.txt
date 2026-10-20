@@ -1,0 +1,12 @@
+# J.A.R.V.I.S. External Hash Database
+# format: MD5 or SHA256 hashes of known malware, one per line
+# EICAR test hashes
+44d88612fea8a8f36de82e1278abb02f
+275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f
+
+# Example WannaCry hashes
+db349b97c37d22f5ea1d1841e3c89eb4
+24d004a104d4d54034dbcffc2a4b19a11f39008a575aa614ea04703480b1022c
+
+# Example generic suspicious hashes
+1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
