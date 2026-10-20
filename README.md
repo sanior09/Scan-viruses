@@ -1,10 +1,8 @@
 <div align="center">
 
-<img src="assets/banner_nachapol.png" alt="Nachapol Industries" width="300">
+# 🛡️ Scan Viruses ⚡
 
-# 🛡️ J.A.R.V.I.S. (Scan Viruses) ⚡
-
-*ระบบผู้ช่วยสแกนและกำจัดไวรัสอัจฉริยะแบบเรียลไทม์ พร้อมหน้าจอควบคุมโฮโลแกรมและขุมพลังวิเคราะห์จาก Gemini AI*
+*ระบบสแกนและกำจัดไวรัสอัจฉริยะแบบเรียลไทม์ พร้อมหน้าจอควบคุมโฮโลแกรมและขุมพลังวิเคราะห์จาก Gemini AI*
 
 [![GitHub Stars](https://img.shields.io/github/stars/sanior09/Scan-viruses?style=for-the-badge&color=00e5ff&logo=github)](https://github.com/sanior09/Scan-viruses/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/sanior09/Scan-viruses?style=for-the-badge&color=0088cc&logo=github)](https://github.com/sanior09/Scan-viruses/network/members)
@@ -28,7 +26,7 @@
 
 ## 📖 เกี่ยวกับโปรเจกต์ (About Project)
 
-**"J.A.R.V.I.S. (Scan Viruses)"** เป็นชุดโปรแกรมรักษาความปลอดภัยและตรวจจับภัยคุกคามสำหรับเครื่องคอมพิวเตอร์ (Tactical Antivirus & Lightweight EDR) ที่ถูกพัฒนาขึ้นด้วยภาษา Python เพื่อให้ผู้ใช้สามารถปกป้องเครื่องได้อย่างมีประสิทธิภาพ รวดเร็ว และไม่กินทรัพยากรเครื่อง
+**"Scan Viruses"** เป็นชุดโปรแกรมรักษาความปลอดภัยและตรวจจับภัยคุกคามสำหรับเครื่องคอมพิวเตอร์ (Tactical Antivirus & Lightweight EDR) ที่ถูกพัฒนาขึ้นด้วยภาษา Python เพื่อให้ผู้ใช้สามารถปกป้องเครื่องได้อย่างมีประสิทธิภาพ รวดเร็ว และไม่กินทรัพยากรเครื่อง
 
 ตัวโปรแกรมผสานการตรวจจับไวรัสแบบดั้งเดิม (YARA Rules & Bad Hash Signatures) เข้ากับหลักการทางวิทยาศาสตร์ด้าน Heuristics (การคำนวณ Shannon Entropy และวิเคราะห์ PE Imports) ควบคู่ไปกับระบบตรวจตราเบื้องหลังตลอด 24 ชั่วโมง และสามารถส่งไฟล์หรือพฤติกรรมที่น่าสงสัยไปให้ **Google Gemini AI** ร่วมประเมินสถานการณ์ได้อย่างแม่นยำ พร้อมหน้าต่างแดชบอร์ดสไตล์ไซไฟที่ตอบสนองลื่นไหล ไม่มีอาการค้าง
 
@@ -81,7 +79,7 @@
 ```
 Scan-viruses/
 ├── assets/
-│   └── banner_nachapol.png   # แบนเนอร์สัญลักษณ์ Nachapol Industries
+│   └── logo_cyan.png         # โลโก้ส่วนต่อประสาน
 ├── signatures/
 │   ├── bad_hashes.txt        # ฐานข้อมูล Hash ไวรัสที่รู้จัก
 │   ├── standard.yar          # กฎ YARA สำหรับมัลแวร์ทั่วไปและ PE Injection
