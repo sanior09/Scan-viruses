@@ -1,213 +1,171 @@
-# 🛡️ J.A.R.V.I.S. SECURITY SUITE — Tactical Endpoint Defense & EDR
-**Nachapol Industries Advanced Cyber Defense System**
+<div align="center">
 
+<img src="assets/banner_nachapol.png" alt="Nachapol Industries" width="300">
+
+# 🛡️ J.A.R.V.I.S. (Scan Viruses) ⚡
+
+*ระบบผู้ช่วยสแกนและกำจัดไวรัสอัจฉริยะแบบเรียลไทม์ พร้อมหน้าจอควบคุมโฮโลแกรมและขุมพลังวิเคราะห์จาก Gemini AI*
+
+[![GitHub Stars](https://img.shields.io/github/stars/sanior09/Scan-viruses?style=for-the-badge&color=00e5ff&logo=github)](https://github.com/sanior09/Scan-viruses/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/sanior09/Scan-viruses?style=for-the-badge&color=0088cc&logo=github)](https://github.com/sanior09/Scan-viruses/network/members)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![CustomTkinter](https://img.shields.io/badge/GUI-CustomTkinter%205.2-00E5FF?style=for-the-badge&logo=gui&logoColor=black)](https://github.com/TomSchimansky/CustomTkinter)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)](https://microsoft.com)
-[![AI Engine](https://img.shields.io/badge/AI%20Core-Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
-[![Database](https://img.shields.io/badge/Cache-SQLite%20B--Tree-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
-[![Detection](https://img.shields.io/badge/Detection-YARA%20%2B%20Entropy-FF6F00?style=for-the-badge)](signatures/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-F5A623?style=for-the-badge)](LICENSE)
-[![Defense Status](https://img.shields.io/badge/Defense%20Matrix-ACTIVE-00E676?style=for-the-badge)](#)
+[![Google Gemini](https://img.shields.io/badge/AI%20Core-Gemini%202.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+[![SQLite Matrix](https://img.shields.io/badge/Cache-SQLite%20B--Tree-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg?style=for-the-badge)](LICENSE)
 
-ระบบรักษาความปลอดภัยและตรวจจับภัยคุกคามบนเครื่องลูกข่าย (Antivirus & Lightweight EDR) พัฒนาขึ้นด้วยภาษา Python โดยจำลองบุคลิกภาพและส่วนติดต่อผู้ใช้สไตล์ **J.A.R.V.I.S. (Just A Rather Very Intelligent System)** ผสานพลังการตรวจจับทั้งแบบ Static Signatures (YARA & Hashes), Heuristics (Shannon Entropy & PE Import Analysis), Multi-Vector Real-Time Surveillance Daemons, และเชื่อมต่อสมองปัญญาประดิษฐ์ **Google Gemini 2.5 Flash** สำหรับวิเคราะห์ภัยคุกคาม Zero-Day ขั้นสูง
+<br/>
 
-<p align="center">
-  <img src="assets/logo_cyan.png" alt="J.A.R.V.I.S. Security Suite Logo" width="160">
-</p>
+[✨ ฟีเจอร์เด่น](#-ฟีเจอร์เด่นและไฮไลท์ของระบบ) • 
+[🎯 โหมดการสแกน](#-พิกัดและโหมดการสแกน-7-รูปแบบ) • 
+[🚀 เริ่มต้นใช้งาน](#-วิธีการติดตั้งและเปิดใช้งาน-getting-started) • 
+[📌 โครงสร้างโปรเจกต์](#-โครงสร้างไฟล์ในโปรเจกต์) • 
+[🤝 การมีส่วนร่วม](#-การมีส่วนร่วมพัฒนา-contributing)
 
-<p align="center">
-  <a href="#-system-architecture--tactical-pipeline">⚡ Architecture</a> •
-  <a href="#-key-features--capabilities">🌟 Features</a> •
-  <a href="#-sector-scan-matrix">🎯 Scan Sectors</a> •
-  <a href="#-quick-start-nachapol-protocol">🚀 Quick Start</a> •
-  <a href="#-deep-dive-module-specifications">🔬 Modules Deep Dive</a> •
-  <a href="#-performance-optimizations">⚡ Optimizations</a> •
-  <a href="#-บันทึกจากผู้พัฒนา-developers-note">📝 Dev Note</a>
-</p>
+</div>
 
 ---
 
-## ⚡ System Architecture & Tactical Pipeline
+## 📖 เกี่ยวกับโปรเจกต์ (About Project)
 
-ระบบสถาปัตยกรรมการตรวจจับ 6 มิติ (Multi-Vector Defense Pipeline) ทำงานประสานกันแบบเรียลไทม์ระหว่างหน้าจอควบคุม HUD และ Background Daemons:
+**"J.A.R.V.I.S. (Scan Viruses)"** เป็นชุดโปรแกรมรักษาความปลอดภัยและตรวจจับภัยคุกคามสำหรับเครื่องคอมพิวเตอร์ (Tactical Antivirus & Lightweight EDR) ที่ถูกพัฒนาขึ้นด้วยภาษา Python เพื่อให้ผู้ใช้สามารถปกป้องเครื่องได้อย่างมีประสิทธิภาพ รวดเร็ว และไม่กินทรัพยากรเครื่อง
+
+ตัวโปรแกรมผสานการตรวจจับไวรัสแบบดั้งเดิม (YARA Rules & Bad Hash Signatures) เข้ากับหลักการทางวิทยาศาสตร์ด้าน Heuristics (การคำนวณ Shannon Entropy และวิเคราะห์ PE Imports) ควบคู่ไปกับระบบตรวจตราเบื้องหลังตลอด 24 ชั่วโมง และสามารถส่งไฟล์หรือพฤติกรรมที่น่าสงสัยไปให้ **Google Gemini AI** ร่วมประเมินสถานการณ์ได้อย่างแม่นยำ พร้อมหน้าต่างแดชบอร์ดสไตล์ไซไฟที่ตอบสนองลื่นไหล ไม่มีอาการค้าง
+
+---
+
+## ✨ ฟีเจอร์เด่นและไฮไลท์ของระบบ
 
 ```
-[ J.A.R.V.I.S. HUD Interface (Dashboard.py) ]
-  ├── ⚡ Animated Arc Reactor Holographic Gauge (CustomTkinter Canvas)
-  ├── 🎯 Sector Scanner (Quick, USB, Downloads, Desktop, RAM, Custom, Full C:)
-  └── 📡 Live Tactical Event Console (Non-blocking I/O Stream)
-             │
-             ├──► [ Core Scan Engine (Scan.py) ]
-             │      ├── 1. SHA-256 / MD5 Full-Stream Hash Matching
-             │      ├── 2. PE Structure & Import Vector Analysis (pefile)
-             │      ├── 3. Shannon Entropy Cryptor / Ransomware Inspection
-             │      ├── 4. YARA Signatures Pattern Matching (yara-python)
-             │      └── 5. SQLite B-Tree Whitelist Matrix (.jarvis_whitelist.db)
-             │
-             ├──► [ AI Cognitive Core (AI_Analyzer.py) ]
-             │      └── Google Gemini 2.5 Flash REST API (Zero-Day Assessment)
-             │
-             └──► [ 24/7 Multi-Vector Surveillance Daemons ]
-                    ├── 👁️ RealTimeMonitor.py      (Downloads, Desktop, Temp Watchdog)
-                    ├── 🔌 USBWatcher.py          (Hot-Plug Storage Auto-Sanitizer)
-                    ├── 🧠 BehavioralMonitor.py   (Process I/O Anomaly & Port Guard)
-                    ├── 🔐 RegistrySurveillance.py(Autorun, Startup & Service Watcher)
-                    └── 🛡️ Watchdog.py            (Self-Defense & Daemon Resurrection)
+   ┌────────────────────────────────────────────────────────────────────────┐
+   │                     🛡️ SCAN VIRUSES CORE SYSTEM                        │
+   ├──────────────────┬──────────────────┬──────────────────────────────────┤
+   │ 🔍 Deep Scanner  │ ⚡ Arc Reactor   │ 🧠 Gemini AI Core                │
+   │ คำนวณ SHA-256    │ หน้าจอโฮโลแกรม   │ ประเมินพฤติกรรม                  │
+   │ ค่า Shannon      │ ปรับเฟรมเรตและ   │ ภัยคุกคาม Zero-Day               │
+   │ Entropy และ YARA │ เสียง Beep แบบ   │ ผ่าน Structured                  │
+   │ ตัดสินแม่นยำ     │ Asynchronous     │ JSON Protocol                    │
+   ├──────────────────┼──────────────────┼──────────────────────────────────┤
+   │ 👁️ RealTime Guard│ 🔌 USB Auto-Scan │ 🔐 Persistence Watcher           │
+   │ ดักจับไฟล์เข้าใหม่│ กำจัดไวรัสใน     │ เฝ้าระวัง Windows Registry,      │
+   │ ใน Downloads     │ แฟลชไดรฟ์ทันที   │ โฟลเดอร์ Startup                 │
+   │ และโฟลเดอร์ Temp │ แบบ Background   │ และ Services แอบแฝง              │
+   └──────────────────┴──────────────────┴──────────────────────────────────┘
 ```
 
----
-
-## 🌟 Key Features & Capabilities
-
-### 1. 🖥️ Holographic Arc Reactor HUD ([Dashboard.py](Dashboard.py))
-- **Dark Cyberpunk Aesthetic:** ธีมสีดำอวกาศตัดกับ Cyan Blue และ Iron Man Amber ออกแบบด้วย CustomTkinter
-- **Dynamic Arc Reactor Gauge:** วงแหวนพลังงานหมุนแอนิเมชันแบบเรียลไทม์ แสดงเปอร์เซ็นต์ความคืบหน้าการสแกนที่แม่นยำ
-- **Non-Blocking Async Audio:** เอฟเฟกต์เสียงคำรามแบบ Sci-Fi ทำงานแยกบน Background Thread หน้าต่างไม่ค้างแม้มิลลิวินาทีเดียว
-- **One-Click Shield Activation:** ปุ่มควบคุมและเปิดระบบเฝ้าระวังเบื้องหลังครบทุกมิติได้ในคลิกเดียว
-
-### 2. 🔍 Multi-Tier Scan Engine ([Scan.py](Scan.py))
-- **Full-Stream Hashing:** คำนวณแฮช MD5 และ SHA-256 จากไบต์ข้อมูลจริงทั้งหมด เทียบฐานข้อมูล [bad_hashes.txt](signatures/bad_hashes.txt)
-- **Shannon Entropy Analysis:** คำนวณความหนาแน่นของข้อมูล (0.00 – 8.00) เพื่อดักจับมัลแวร์ที่เข้ารหัส (Encrypted Cryptor / Ransomware)
-- **PE Import Vector Check:** ตรวจสอบ Portable Executable Imports เพื่อตรวจจับเทคนิค Process Injection, Process Hollowing, Dropper, และ Keylogger
-- **YARA Rule Compilation:** รองรับชุดกฎ YARA แบบไดนามิกแยกประเภทสคริปต์อันตรายและไบนารีระบบ
-- **Safe Vault Isolation:** กักกันไฟล์น่าสงสัยเข้าสู่โฟลเดอร์ `Quarantine/` ด้วยรหัสนามสกุล `.jarvis_locked` โดยไม่ลบไฟล์ทิ้ง
-
-### 3. 🧠 Cognitive AI Threat Core ([AI_Analyzer.py](AI_Analyzer.py))
-- เชื่อมต่อ API ของ **Google Gemini 2.5 Flash** ผ่าน Structured JSON Protocol
-- ทำหน้าที่เป็น "สมองส่วนวิเคราะห์พฤติกรรม" สำหรับเหตุการณ์ที่กฎตายตัว (Static Signatures) ไม่สามารถตัดสินได้
-- ประเมิน Threat Level (`SAFE`, `SUSPICIOUS`, `CRITICAL`) พร้อมให้เหตุผลประกอบการระงับโปรเซส
-
-### 4. 👁️ 24/7 Multi-Vector Real-Time Surveillance
-| โมดูลสายตรวจ | หน้าที่และเวกเตอร์ที่เฝ้าระวัง | กลไกการตรวจจับ |
-|---|---|---|
-| **[RealTimeMonitor.py](RealTimeMonitor.py)** | เฝ้าระวังไฟล์เข้าใหม่ใน Downloads, Desktop, Temp | Watchdog FileSystemEventHandler |
-| **[USBWatcher.py](USBWatcher.py)** | ตรวจจับ Flash Drive / ฮาร์ดดิสก์พกพาที่เสียบเข้าเครื่อง | Silent Background Threat Elimination |
-| **[BehavioralMonitor.py](BehavioralMonitor.py)** | ดักจับโปรเซสเขียนไฟล์รัวผิดปกติ & พอร์ต C2 ต้องสงสัย | Psutil Disk I/O & Network Analysis |
-| **[RegistrySurveillance.py](RegistrySurveillance.py)** | ตรวจจับการฝังตัวผ่าน Run, RunOnce, Startup, Services | Windows Registry & Subkeys Snapshot |
-| **[Watchdog.py](Watchdog.py)** | พิทักษ์ระบบตนเอง คอยกู้ชีพโปรเซสสายตรวจที่ถูกปิดกั้น | Parent-Child Process Supervision |
+### ⚡ จุดเด่นสำคัญ:
+- **🎨 Futuristic Cyber Dashboard:** หน้าจอควบคุมดีไซน์ล้ำสมัยด้วย CustomTkinter พร้อมวงแหวน Arc Reactor Gauge แสดงสถานะเรียลไทม์
+- **⚡ Ultra-Fast SQLite Whitelist:** ปรับปรุงแคชไฟล์ปลอดภัยสู่ฐานข้อมูล SQLite ทำให้อ่านข้อมูลเร็วกว่าเดิมในระดับ 0.00 มิลลิวินาที ไม่ค้างหน่วง
+- **🛡️ Safe Quarantine Isolation:** กักกันไฟล์อันตรายไปยังห้องนิรภัย `Quarantine/` ด้วยนามสกุล `.jarvis_locked` ปลอดภัยโดยไม่มีการลบไฟล์ทิ้งถาวร
+- **🧠 Zero-Day AI Consultation:** มีระบบขอความเห็นจาก AI (Google Gemini) ในกรณีที่พบไฟล์บีบอัดข้อมูลสูงหรือคำสั่งสคริปต์ที่น่าสงสัย
+- **🐕 Self-Defense Watchdog:** สคริปต์ตรวจตราตัวเอง คอยปลุกชีพเซอร์วิสเฝ้าระวังเบื้องหลังให้กลับมาทำงานอัตโนมัติหากเกิดข้อผิดพลาด
 
 ---
 
-## 🎯 Sector Scan Matrix (พิกัดการสแกน)
+## 🎯 พิกัดและโหมดการสแกน 7 รูปแบบ
 
 | โหมดสแกน | สัญลักษณ์ | ขอบเขตการทำงาน | ความเร็ว |
 |---|:---:|---|:---:|
-| **Quick Scan** | ⚡ | สแกนโฟลเดอร์ Downloads และ Desktop ซึ่งเป็นจุดตกกระทบหลักของมัลแวร์ | เร็วมาก (5-15 วิ) |
-| **USB Flash Drive** | 🔌 | สแกนแฟลชไดรฟ์และ Removable Drives ทุกตัวที่เสียบอยู่เพื่อกำจัด Autorun | เร็ว |
-| **Downloads** | 📁 | ตรวจสอบไฟล์ทั้งหมดในโฟลเดอร์ดาวน์โหลดของผู้ใช้งาน | ปานกลาง |
-| **Desktop** | 🖥️ | ตรวจสอบไฟล์ ไอคอนโปรแกรม และทางลัดทั้งหมดบนหน้าจอเดสก์ท็อป | เร็ว |
-| **RAM Active Memory** | 🧠 | สแกน Process Memory, Command-line Tokens, Fileless Execution Chains | ทันที |
-| **Custom Sector** | 📂 | เลือกโฟลเดอร์หรือไดรฟ์ที่กำหนดเองผ่านไดอะล็อก Explorer | กำหนดเอง |
-| **Full System** | 💾 | สแกนเจาะลึกทั้งไดรฟ์ C:\ พร้อมระบบ Smart Filter ข้ามไฟล์ขยะระบบ | ละเอียด |
+| **Quick Scan** | ⚡ | สแกนโฟลเดอร์ Desktop และ Downloads ซึ่งเป็นเป้าหมายหลักของไฟล์แปลกปลอม | เร็วมาก |
+| **USB Flash Drive** | 🔌 | สแกนแฟลชไดรฟ์และ Removable Drives ทุกตัวที่เชื่อมต่อ เพื่อกำจัดไวรัสซ่อนไฟล์/Autorun | รวดเร็ว |
+| **Downloads** | 📁 | สแกนเจาะลึกเฉพาะไฟล์ที่ดาวน์โหลดมาจากอินเทอร์เน็ต | ปานกลาง |
+| **Desktop** | 🖥️ | ตรวจสอบไฟล์ โปรแกรม และชอร์ตคัตทั้งหมดบนหน้าจอเดสก์ท็อป | รวดเร็ว |
+| **RAM Active Memory** | 🧠 | ตรวจสอบโปรเซสที่กำลังทำงานอยู่ในหน่วยความจำ คำสั่งแฝง และพารามิเตอร์แปลกปลอม | ทันที |
+| **Custom Sector** | 📂 | เลือกสแกนเฉพาะโฟลเดอร์หรือไดรฟ์ที่กำหนดเองได้อย่างอิสระ | ตามขนาดโฟลเดอร์ |
+| **Full System** | 💾 | สแกนลึกทั้งไดรฟ์ C:\ พร้อมระบบคัดกรองข้ามไฟล์ระบบ (Smart Exclusions) | ละเอียด |
 
 ---
 
-## 🚀 Quick Start (Nachapol Protocol)
+## 📌 โครงสร้างไฟล์ในโปรเจกต์
 
-### 1. ความต้องการขั้นต่ำของระบบ (Prerequisites)
-- **ระบบปฏิบัติการ:** Windows 10 หรือ Windows 11 (64-bit)
-- **ภาษา:** Python 3.10 ขึ้นไป
+```
+Scan-viruses/
+├── assets/
+│   └── banner_nachapol.png   # แบนเนอร์สัญลักษณ์ Nachapol Industries
+├── signatures/
+│   ├── bad_hashes.txt        # ฐานข้อมูล Hash ไวรัสที่รู้จัก
+│   ├── standard.yar          # กฎ YARA สำหรับมัลแวร์ทั่วไปและ PE Injection
+│   └── scripts.yar           # กฎ YARA สำหรับสคริปต์อันตราย (PowerShell, VBS)
+├── AI_Analyzer.py            # โมดูลวิเคราะห์พฤติกรรมผ่าน Google Gemini 2.5 Flash
+├── BehavioralMonitor.py      # โมดูลตรวจพฤติกรรมโปรเซส (Disk I/O & Network Ports)
+├── Dashboard.py              # หน้าจอควบคุมหลัก (HUD) และ Arc Reactor Gauge
+├── RealTimeMonitor.py        # เซอร์วิสเฝ้าระวังไฟล์เข้าใหม่แบบเรียลไทม์
+├── RegistrySurveillance.py   # ตรวจจับการฝังตัวใน Windows Registry และ Services
+├── Scan.py                   # กลไกแกนสแกนหลัก (Hashing, Entropy, YARA, SQLite Whitelist)
+├── USBWatcher.py             # เซอร์วิสตรวจจับและสแกนแฟลชไดรฟ์อัตโนมัติ
+├── Watchdog.py               # ระบบพิทักษ์และกู้ชีพโปรเซสสายตรวจ
+├── run_scanner.bat           # สคริปต์สำหรับเปิดระบบสแกนอัตโนมัติในคลิกเดียว
+├── requirements.txt          # รายการไลบรารีที่จำเป็นสำหรับโปรเจกต์
+├── LICENSE                   # สัญญาอนุญาตการใช้งาน Open-Source แบบ MIT
+└── README.md                 # เอกสารแนะนำและคู่มือการใช้งานระบบ (เอกสารนี้)
+```
+
+---
+
+## 🚀 วิธีการติดตั้งและเปิดใช้งาน (Getting Started)
+
+ท่านสามารถดาวน์โหลดและรันโปรเจกต์บนระบบปฏิบัติการ Windows ได้อย่างง่ายดาย:
+
+### 1. โคลนคลังโค้ด (Clone Repository)
+```bash
+git clone https://github.com/sanior09/Scan-viruses.git
+cd Scan-viruses
+```
 
 ### 2. ติดตั้ง Dependencies
-เปิด Terminal ในโฟลเดอร์โปรเจกต์แล้วรัน:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. ตั้งค่า AI Cognitive Core (ทางเลือกเสริม)
-คัดลอกไฟล์ `.env.example` เป็น `.env` และระบุ Gemini API Key ของท่าน:
+### 3. ตั้งค่าสภาพแวดล้อม (`.env`)
+คัดลอกไฟล์ `.env.example` เป็น `.env` และใส่คีย์ของ Google Gemini (ทางเลือกเสริม):
 ```env
-# Google Gemini API Key for J.A.R.V.I.S. Cognitive Assessment
-GEMINI_API_KEY=AIzaSyYourActualGeminiAPIKeyHere
+# Google Gemini API Key สำหรับระบบวิเคราะห์เชิงลึก
+GEMINI_API_KEY=AIzaSyYourGeminiAPIKeyHere
 ```
-*(หากไม่ใส่ API Key ระบบสแกนและโมดูลเฝ้าระวังทั้งหมดจะยังคงทำงานได้ตามปกติ 100% โดยใช้ฐานข้อมูล Heuristic และ YARA ภายในเครื่อง)*
+*(หากไม่ระบุ API Key โปรแกรมจะใช้ระบบฐานข้อมูล Signature และ Heuristic ภายในเครื่องทำงานได้เต็มรูปแบบ 100%)*
 
-### 4. สตาร์ทระบบ J.A.R.V.I.S.
+### 4. เปิดใช้งานระบบ (System Execution)
 
-#### 🟢 ตัวเลือกที่ 1: One-Click Boot (แนะนำ)
-ดับเบิลคลิกไฟล์ **`run_scanner.bat`** เพื่อเปิดแดชบอร์ดและปลุกระบบ Watchdog อัตโนมัติ:
-```cmd
-run_scanner.bat
-```
+เลือกวิธีใดวิธีหนึ่งตามความสะดวกของท่าน:
 
-#### 🟡 ตัวเลือกที่ 2: รันผ่าน Command Line
-```cmd
-python Dashboard.py
-```
+* **วิธีที่ 1 (แนะนำสำหรับ Windows):**  
+  ดับเบิลคลิกไฟล์ **`run_scanner.bat`** เพื่อเปิดแดชบอร์ดพร้อมสตาร์ทระบบเฝ้าระวัง
 
-#### 🔵 ตัวเลือกที่ 3: สแกนไฟล์เดี่ยวแบบ Standalone CLI
-```cmd
-python Scan.py --no-pause "C:\path\to\suspicious_file.exe"
-```
+* **วิธีที่ 2 (ผ่าน Command Line):**
+  ```bash
+  python Dashboard.py
+  ```
+
+* **วิธีที่ 3 (สแกนไฟล์เดี่ยวแบบ Standalone):**
+  ```bash
+  python Scan.py --no-pause "C:\path\to\file.exe"
+  ```
 
 ---
 
-## 🔬 Deep Dive: Module Specifications
+## 🤝 การมีส่วนร่วมพัฒนา (Contributing)
 
-### 🛡️ 1. SQLite Whitelist Matrix
-เพื่อขจัดปัญหาอาการแล็กจากการอ่านไฟล์ JSON ขนาดมหึมา ระบบได้อัปเกรดเป็น SQLite พร้อมระบบ **Write-Ahead Logging (WAL)**:
-- **เวลาในการค้นหา (Lookup Latency):** `0.00 มิลลิวินาที` ต่อไฟล์ ด้วย B-Tree Primary Key
-- **Batch Insertion:** รองรับการบันทึกข้อมูลปลอดภัยสะสมครั้งละ 500 รายการ ช่วยลด Disk I/O Overhead
-- **Data Integrity:** ข้อมูลไม่เสียหายแม้เครื่องคอมพิวเตอร์จะดับกะทันหัน
+ยินดีต้อนรับทุกคำแนะนำ กฎ YARA ใหม่ๆ และการส่ง Pull Request เพื่อพัฒนาขีดความสามารถของระบบ:
 
-### 🧪 2. Shannon Entropy Math
-ดัชนีวัดความยุ่งเหยิงของข้อมูลระดับไบนารี คำนวณตามสูตรทางคณิตศาสตร์:
-$$H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)$$
-- ค่า Entropy ปกติของไฟล์ข้อความและโค้ด: `3.0 - 5.5`
-- ค่า Entropy ของซอฟต์แวร์ไบนารีทั่วไป: `6.0 - 7.2`
-- ค่า Entropy ของไฟล์ที่ถูกเข้ารหัสด้วย Ransomware / Obfuscated Crypter: `7.85 - 8.00` (ระบบจะแจ้งเตือนระดับสูงสุดทันที)
+1. ทำการ **Fork** โปรเจกต์นี้
+2. สร้าง Feature Branch ของท่าน (`git checkout -b feature/NewFeature`)
+3. ทำการ Commit การเปลี่ยนแปลง (`git commit -m 'Add some NewFeature'`)
+4. Push ขึ้นสู่ Branch ของท่าน (`git push origin feature/NewFeature`)
+5. เปิด **Pull Request** เพื่อตรวจสอบและรวมโค้ด
 
 ---
 
-## ⚡ Performance Optimizations
+## 📄 สัญญาอนุญาต (License)
 
-1. **CPU Core Balancing:** จำกัดจำนวน Worker Threads ให้เหลือคอร์ว่างสำหรับ Windows และ GUI เสมอ 1-2 คอร์ ป้องกันปัญหาเมาส์กระตุก
-2. **Fast Log Tailing:** ปรับฟังก์ชันอ่านบันทึกประวัติให้อ่านเฉพาะ 8 KB ท้ายไฟล์ ไม่โหลดซ้ำทั้งไฟล์ขนาดใหญ่
-3. **Adaptive Canvas FPS:** วงแหวนโฮโลแกรมปรับเฟรมเรตอัตโนมัติ (12.5 FPS ขณะสแตนด์บาย, 20 FPS ขณะสแกน)
-4. **Asynchronous Winsound:** แยกเธรดสำหรับส่งเสียงแจ้งเตือน ไม่ขัดจังหวะการตอบสนองของหน้าจอ CustomTkinter
+โปรเจกต์นี้เผยแพร่ภายใต้สัญญาอนุญาต **MIT License** — ท่านสามารถนำไปศึกษา พัฒนาต่อยอด หรือดัดแปลงได้อย่างเสรี ดูรายละเอียดเพิ่มเติมได้ที่ไฟล์ [LICENSE](LICENSE)
 
 ---
 
-```
-========================================================================
-                   _    _     _______      _______  _____ 
-                  | |  / \   |  __ \ \    / /_   _|/ ____|
-                  | | /  \  | |__) \ \  / /  | | | (___  
-              _   | |/ /\ \ |  _  / \ \/ /   | |  \___ \ 
-              | |__| / ____ \| | \ \  \  /   _| |_ ____) |
-               \____/_/    \_\|_|  \_\  \/   |_____|_____/ 
-========================================================================
-              TACTICAL ENDPOINT DETECTION & RESPONSE (EDR)
-========================================================================
-```
-*Status: DEFENSE MATRIX ACTIVE*  
-*Threat Signatures Loaded: YARA Rules Online • Cognitive Core Ready*  
+<div align="center">
 
----
+สร้างสรรค์ด้วยความใส่ใจในความปลอดภัยของระบบ 🩵 โดย [sanior09](https://github.com/sanior09)
 
-## 📝 บันทึกจากผู้พัฒนา (Developer's Note)
+*หากโปรเจกต์นี้มีประโยชน์ต่อท่าน อย่าลืมกด ⭐️ Star ให้กับ Repository นี้นะครับ!*
 
-> *"โปรเจกต์ J.A.R.V.I.S. Security Suite เกิดขึ้นจากความตั้งใจที่จะสร้างระบบป้องกันไวรัสและภัยคุกคามที่มีหน้าตาและฟีลลิ่งแบบภาพยนตร์ไซไฟ แต่สามารถตรวจจับและวิเคราะห์ภัยคุกคามในโลกความเป็นจริงได้แม่นยำ
->
-> โค้ดได้รับการปรับปรุงให้มีประสิทธิภาพสูง ไม่กินแรม ไม่สูบซีพียูจนเครื่องค้าง และแก้ปัญหา False-Positive กับไฟล์ระบบและโปรแกรมทั่วไปเรียบร้อยแล้ว
->
-> เพื่อนๆ นักพัฒนาและผู้ที่สนใจด้าน Cybersecurity ทุกท่านสามารถนำโค้ดไปศึกษา Fork ดัดแปลง เพิ่มเติมกฎ YARA หรือเปิด Pull Request เพื่อต่อยอดระบบความปลอดภัยร่วมกันได้เต็มที่เลยครับ!"*
->
-> — **พัฒนาด้วยใจโดย Nachapol Industries**
-
----
-
-## 🤝 Attribution & Credits (ข้อตกลงการให้เครดิต)
-
-หากท่านนำโปรเจกต์ **J.A.R.V.I.S. Security Suite** หรือส่วนหนึ่งส่วนใดของโค้ดไปใช้งาน, พัฒนาต่อยอด (Fork), ทำคลิปรีวิว/สื่อวิดีโอ, หรือนำไปจัดแสดง:
-- 🌟 **กรุณาให้เครดิตผู้สร้าง:** **Nachapol Industries**
-- 🔗 **แนบลิงก์กลับมายัง Repository ต้นฉบับ:** [https://github.com/sanior09/Scan-viruses](https://github.com/sanior09/Scan-viruses)
-- ⚖️ **ข้อกำหนดทางกฎหมาย:** ภายใต้สัญญาอนุญาต **[MIT License](LICENSE)** ผู้ใช้งานจำเป็นต้องเก็บข้อความลิขสิทธิ์ `Copyright (c) 2026 Nachapol Industries` ไว้ในทุกสำเนาของซอฟต์แวร์
-
----
-
-## 📜 License
-This project is open-source under the [MIT License](LICENSE).
-
-*Developed & Architected with ❤️ by Nachapol Industries*
+</div>
