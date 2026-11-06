@@ -20,6 +20,12 @@
 [📌 โครงสร้างโปรเจกต์](#-โครงสร้างไฟล์ในโปรเจกต์) • 
 [🤝 การมีส่วนร่วม](#-การมีส่วนร่วมพัฒนา-contributing)
 
+<br/><br/>
+
+<p align="center">
+  <img src="assets/dashboard_preview.png" alt="J.A.R.V.I.S. Tactical HUD Interface" width="900">
+</p>
+
 </div>
 
 ---
@@ -38,11 +44,11 @@
    ┌────────────────────────────────────────────────────────────────────────┐
    │                     🛡️ SCAN VIRUSES CORE SYSTEM                        │
    ├──────────────────┬──────────────────┬──────────────────────────────────┤
-   │ 🔍 Deep Scanner  │ ⚡ Arc Reactor   │ 🧠 Gemini AI Core                │
-   │ คำนวณ SHA-256    │ หน้าจอโฮโลแกรม   │ ประเมินพฤติกรรม                  │
-   │ ค่า Shannon      │ ปรับเฟรมเรตและ   │ ภัยคุกคาม Zero-Day               │
-   │ Entropy และ YARA │ เสียง Beep แบบ   │ ผ่าน Structured                  │
-   │ ตัดสินแม่นยำ     │ Asynchronous     │ JSON Protocol                    │
+   │ 🔍 Deep Scanner  │ ⚡ Tactical HUD   │ 🧠 Gemini AI Core                │
+   │ คำนวณ SHA-256    │ Quantum Telemetry│ ประเมินพฤติกรรม                  │
+   │ ค่า Shannon      │ Matrix ไร้ขอบ    │ ภัยคุกคาม Zero-Day               │
+   │ Entropy และ YARA │ ฟอนต์คมชัดระดับ  │ ผ่าน Structured                  │
+   │ ตัดสินแม่นยำ     │ High-DPI Display │ JSON Protocol                    │
    ├──────────────────┼──────────────────┼──────────────────────────────────┤
    │ 👁️ RealTime Guard│ 🔌 USB Auto-Scan │ 🔐 Persistence Watcher           │
    │ ดักจับไฟล์เข้าใหม่│ กำจัดไวรัสใน     │ เฝ้าระวัง Windows Registry,      │
@@ -52,7 +58,7 @@
 ```
 
 ### ⚡ จุดเด่นสำคัญ:
-- **🎨 Futuristic Cyber Dashboard:** หน้าจอควบคุมดีไซน์ล้ำสมัยด้วย CustomTkinter พร้อมวงแหวน Arc Reactor Gauge แสดงสถานะเรียลไทม์
+- **🎨 Futuristic Cyber Tactical HUD:** หน้าจอควบคุมดีไซน์ล้ำสมัยด้วย CustomTkinter พร้อม Cognitive Cores Matrix 3x2, สตรีม Telemetry แบบเรียลไทม์ และระบบเรนเดอร์ภาษาไทยคมชัดสูงด้วย Leelawadee UI + Windows DPI-Awareness
 - **⚡ Ultra-Fast SQLite Whitelist:** ปรับปรุงแคชไฟล์ปลอดภัยสู่ฐานข้อมูล SQLite ทำให้อ่านข้อมูลเร็วกว่าเดิมในระดับ 0.00 มิลลิวินาที ไม่ค้างหน่วง
 - **🛡️ Safe Quarantine Isolation:** กักกันไฟล์อันตรายไปยังห้องนิรภัย `Quarantine/` ด้วยนามสกุล `.jarvis_locked` ปลอดภัยโดยไม่มีการลบไฟล์ทิ้งถาวร
 - **🧠 Zero-Day AI Consultation:** มีระบบขอความเห็นจาก AI (Google Gemini) ในกรณีที่พบไฟล์บีบอัดข้อมูลสูงหรือคำสั่งสคริปต์ที่น่าสงสัย
@@ -79,6 +85,7 @@
 ```
 Scan-viruses/
 ├── assets/
+│   ├── dashboard_preview.png # ภาพพรีวิวหน้าต่าง Tactical Cyber HUD
 │   └── logo_cyan.png         # โลโก้ส่วนต่อประสาน
 ├── signatures/
 │   ├── bad_hashes.txt        # ฐานข้อมูล Hash ไวรัสที่รู้จัก
@@ -86,7 +93,7 @@ Scan-viruses/
 │   └── scripts.yar           # กฎ YARA สำหรับสคริปต์อันตราย (PowerShell, VBS)
 ├── AI_Analyzer.py            # โมดูลวิเคราะห์พฤติกรรมผ่าน Google Gemini 2.5 Flash
 ├── BehavioralMonitor.py      # โมดูลตรวจพฤติกรรมโปรเซส (Disk I/O & Network Ports)
-├── Dashboard.py              # หน้าจอควบคุมหลัก (HUD) และ Arc Reactor Gauge
+├── Dashboard.py              # หน้าจอควบคุมหลัก (Futuristic Cyber Tactical HUD & Telemetry)
 ├── RealTimeMonitor.py        # เซอร์วิสเฝ้าระวังไฟล์เข้าใหม่แบบเรียลไทม์
 ├── RegistrySurveillance.py   # ตรวจจับการฝังตัวใน Windows Registry และ Services
 ├── Scan.py                   # กลไกแกนสแกนหลัก (Hashing, Entropy, YARA, SQLite Whitelist)
